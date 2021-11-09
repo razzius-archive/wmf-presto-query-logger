@@ -53,80 +53,16 @@
         </repository>
     </repositories>
 
-    <!-- TODO -->
     <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.basepom.maven</groupId>
-                    <artifactId>duplicate-finder-maven-plugin</artifactId>
-                    <configuration>
-                        <ignoredResourcePatterns>plugin.xml</ignoredResourcePatterns>
-                        <ignoredDependencies>
-                            <!--
-                                the following dependencies are problematic but non trivial to
-                                clean, it will come in a second time...
-                            -->
-                            <dependency>
-                                <groupId>javax.servlet</groupId>
-                                <artifactId>servlet-api</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>javax.servlet</groupId>
-                                <artifactId>javax.servlet-api</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.mortbay.jetty</groupId>
-                                <artifactId>servlet-api</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.codehaus.groovy</groupId>
-                                <artifactId>groovy-all</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.codehaus.groovy</groupId>
-                                <artifactId>groovy</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.antlr</groupId>
-                                <artifactId>ST4</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.antlr</groupId>
-                                <artifactId>antlr-runtime</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>org.antlr</groupId>
-                                <artifactId>antlr4</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>javax.xml.stream</groupId>
-                                <artifactId>stax-api</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>stax</groupId>
-                                <artifactId>stax-api</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>com.sun.mail</groupId>
-                                <artifactId>javax.mail</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>javax.mail</groupId>
-                                <artifactId>mailapi</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>com.sun.activation</groupId>
-                                <artifactId>javax.activation</artifactId>
-                            </dependency>
-                            <dependency>
-                                <groupId>javax.activation</groupId>
-                                <artifactId>activation</artifactId>
-                            </dependency>
-                        </ignoredDependencies>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
+        <plugins>
+            <plugin>
+                <groupId>org.basepom.maven</groupId>
+                <artifactId>duplicate-finder-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-checkstyle-plugin</artifactId>
+            </plugin>
+        </plugins>
     </build>
 </project>
