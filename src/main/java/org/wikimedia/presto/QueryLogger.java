@@ -1,6 +1,6 @@
 package org.wikimedia.presto;
 
-import io.prestosql.spi.eventlistener.EventListener;
+import com.facebook.presto.spi.eventlistener.EventListener;
 
 /**
  * Hello world!
